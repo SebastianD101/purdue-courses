@@ -17,13 +17,9 @@ function redditRedirect() {
     document.getElementById("course").style.borderColor = "white";
     var subject = document.getElementById("subject").value;
     var course = document.getElementById("course").value;
-
-
-    if (course.substring (3, 5) === "00") {
+    if (course.substring(3, 5) === "00") {
         course = course.substring(0, 3);
     }
-
-    
     let a = document.createElement('a');
     if(subject !== "" && course !== "") {
         a.target= '_blank';

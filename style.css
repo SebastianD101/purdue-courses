@@ -24,6 +24,21 @@
     #button:hover + #input{
       color: #FFFFFF;
     }
+    form {
+        width: 60%;
+    }
+    input[type=text] {
+        width: 100%;
+    }
+}
+
+@media all and (min-width:0px) and (max-width: 768px) {
+    input[type=text] {
+        width: 80%;
+    }
+    input[type=button] {
+        width: 80%;
+    }
 }
 
 body {
@@ -37,12 +52,10 @@ form {
     margin-left: 10%;
     margin-right: 10%;
     margin: auto;
-    width: 60%;
     padding: 10px;
 }
 
 input[type=text] {
-    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
