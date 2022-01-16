@@ -17,10 +17,17 @@ function redditRedirect() {
     document.getElementById("course").style.borderColor = "white";
     var subject = document.getElementById("subject").value;
     var course = document.getElementById("course").value;
+
+
+    if (course.substring (3, 5) === "00") {
+        course = course.substring(0, 3);
+    }
+
+    
     let a = document.createElement('a');
     if(subject !== "" && course !== "") {
         a.target= '_blank';
-        a.href = 'https://www.reddit.com/r/purdue/search?q=' + subject + '+' + course + '&restrict_sr=on&sort=new&t=all';
+        a.href = 'https://www.reddit.com/r/purdue/search?q=' + subject + '+' + course + '&restrict_sr=on&sort=top&t=all';
         a.click();
     }
     setTimeout(clearDemo, 1000);
