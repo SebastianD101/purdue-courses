@@ -1,7 +1,7 @@
 #button {
     border: none;
     color: #CEB888;
-    padding: 4px 75px;
+    height: 40px;
     text-align: center;
     width: 30%;
     text-decoration: none;
@@ -15,7 +15,7 @@
     border-radius: 10px;
 }
 
-@media all and (min-width:769px) and (max-width: 5000px) {
+@media all and (min-width:800px) and (max-width: 5000px) {
     #button:hover {
         background-color: rgba(255, 255, 255, 0.1);
         color: #FFFFFF;
@@ -30,9 +30,12 @@
     input[type=text] {
         width: 100%;
     }
+    input[type=button] {
+        text-align: center;
+    }
 }
 
-@media all and (min-width:0px) and (max-width: 768px) {
+@media all and (min-width:0px) and (max-width: 800px) {
     input[type=text] {
         width: 80%;
     }
@@ -42,9 +45,9 @@
 }
 
 body {
+    background: #121212;
     font-size: 20px;
     color: #CEB888;
-    background: #121212;
     margin:0;
 }
 
@@ -52,7 +55,6 @@ form {
     margin-left: 10%;
     margin-right: 10%;
     margin: auto;
-    padding: 10px;
 }
 
 input[type=text] {
@@ -71,10 +73,6 @@ input[type=text]:focus {
       background-color: Transparent;
       color: #ffffff;
       border: 2px solid #CEB888;
-}
-
-input[type=button] {
-    text-align: center;
 }
 
 ::placeholder {
