@@ -60,13 +60,13 @@ input[type=text]:focus {
       border: 2px solid #CEB888;
 }
 
+input[type=button] {
+    text-align: center;
+}
+
 ::placeholder {
   color: #CEB888;
   opacity: 1;
-}
-
-html {
-  height:100%;
 }
 
 input[type=text]:focus, textarea:focus {
