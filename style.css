@@ -39,8 +39,9 @@
     input[type=text] {
         width: 80%;
     }
-    input[type=button] {
+    #button {
         width: 80%;
+        text-align: center;
     }
 }
 
