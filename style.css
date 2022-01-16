@@ -3,6 +3,7 @@
     color: #CEB888;
     padding: 4px 75px;
     text-align: center;
+    width: 30%;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
@@ -14,14 +15,17 @@
     border-radius: 10px;
 }
 
-#button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #FFFFFF;
-    border: 5px solid #FFFFFF;
+@media all and (min-width:769px) and (max-width: 5000px) {
+    #button:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #FFFFFF;
+        border: 5px solid #FFFFFF;
+    }
+    #button:hover + #input{
+      color: #FFFFFF;
+    }
 }
-#button:hover + #input{
-  color: #FFFFFF;
-}
+
 body {
     font-size: 20px;
     color: #CEB888;
