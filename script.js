@@ -974,6 +974,24 @@ function timeRedirect() {
     setTimeout(clearDemo, 1000);
 }
 
+function examRedirect() {
+    document.getElementById("subject").style.borderColor = "white";
+    document.getElementById("course").style.borderColor = "white";
+    var subject = document.getElementById("subject").value;
+    subject = subject.toUpperCase();
+    var course = document.getElementById("course").value;
+    let a = document.createElement('a');
+    if (course.length == 3) {
+        course = course.concat("00");
+    }
+    if(subject !== "" && course !== "") {
+        a.target = '_blank';
+        a.href = 'https://timetable.mypurdue.purdue.edu/Timetabling/gwt.jsp?page=exams#name=' + subject + '+' + course + '&term=Spring2022PWL';
+        a.click();
+    }
+    setTimeout(clearDemo, 1000);
+}
+
 function redditRedirect() {
     document.getElementById("subject").style.borderColor = "white";
     document.getElementById("course").style.borderColor = "white";
