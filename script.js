@@ -781,13 +781,13 @@ function maCheck() {
     }
 
     if (ma_check) {
-        document.getElementById("exam_archive").style.display = "block";
+        document.getElementById("exam_archive").style.display = "inline";
     } else {
         document.getElementById("exam_archive").style.display = "none";
     }
 
     if (wj_check) {
-        document.getElementById("weeklyjoy_exam_archive").style.display = "block";
+        document.getElementById("weeklyjoy_exam_archive").style.display = "inline";
     } else {
         document.getElementById("weeklyjoy_exam_archive").style.display = "none";
     }  
