@@ -631,7 +631,131 @@ var ma_exam_archive = [
     ["MA", "26200"],
     ["MA", "26500"],
     ["MA", "26600"],
-]
+];
+
+var all_exam_archive = [
+    ["CE", "20300"],
+    ["CE", "29700"],
+    ["CE", "29800"],
+    ["CE", "31100"],
+    ["CE", "34000"],
+    ["CE", "35000"],
+    ["CE", "35300"],
+    ["CE", "36100"],
+    ["CE", "37100"],
+    ["CE", "39800"],
+    ["CE", "47300"],
+    ["CE", "47400"],
+    ["CE", "47900"],
+    ["CE", "55700"],
+    ["CE", "56000"],
+    ["CE", "59700"],
+    ["ECE", "20100"],
+    ["ECE", "20200"],
+    ["ECE", "25500"],
+    ["ECE", "26400"],
+    ["ECE", "30100"],
+    ["ECE", "30200"],
+    ["ECE", "30500"],
+    ["ECE", "30862"],
+    ["ECE", "31100"],
+    ["ECE", "32100"],
+    ["ECE", "32300"],
+    ["ECE", "36800"],
+    ["ECE", "36900"],
+    ["ECE", "38200"],
+    ["ECE", "40400"],
+    ["ECE", "43200"],
+    ["ECE", "43800"],
+    ["ECE", "45600"],
+    ["ECE", "46100"],
+    ["ECE", "46200"],
+    ["ECE", "46800"],
+    ["ECE", "47300"],
+    ["ECE", "53800"],
+    ["ECE", "55200"],
+    ["ECE", "55900"],
+    ["ECE", "56300"],
+    ["ECE", "56500"],
+    ["ECE", "57300"],
+    ["ECE", "59500"],
+    ["ECE", "60200"],
+    ["ECE", "60600"],
+    ["ECE", "60800"],
+    ["ECE", "63700"],
+    ["ECE", "63800"],
+    ["ECE", "64100"],
+    ["ECE", "64500"],
+    ["ECE", "64700"],
+    ["ECE", "66300"],
+    ["ECON", "25100"],
+    ["ECON", "25200"],
+    ["ECON", "38000"],
+    ["ENGR", "13100"],
+    ["ENGR", "13200"],
+    ["IE", "23000"],
+    ["IE", "33000"],
+    ["IE", "33600"],
+    ["IE", "34300"],
+    ["IE", "47400"],
+    ["IE", "48600"],
+    ["IE", "53000"],
+    ["IE", "54600"],
+    ["IE", "58100"],
+    ["IE", "59000"],
+    ["MA", "15800"],
+    ["MA", "16100"],
+    ["MA", "16200"],
+    ["MA", "17400"],
+    ["MA", "26100"],
+    ["MA", "26200"],
+    ["MA", "26500"],
+    ["MA", "26600"],
+    ["MA", "30100"],
+    ["MA", "30300"],
+    ["MA", "35100"],
+    ["MA", "35300"],
+    ["MA", "36200"],
+    ["MA", "36600"],
+    ["MA", "41600"],
+    ["MA", "51000"],
+    ["MA", "51100"],
+    ["MA", "52500"],
+    ["MA", "52700"],
+    ["MA", "53000"],
+    ["ME", "20000"],
+    ["ME", "26300"],
+    ["ME", "27000"],
+    ["ME", "27400"],
+    ["ME", "30000"],
+    ["ME", "30900"],
+    ["ME", "31500"],
+    ["ME", "32300"],
+    ["ME", "35200"],
+    ["ME", "36500"],
+    ["ME", "37500"],
+    ["ME", "41300"],
+    ["ME", "43300"],
+    ["ME", "44000"],
+    ["ME", "45200"],
+    ["ME", "47500"],
+    ["ME", "50100"],
+    ["ME", "50500"],
+    ["ME", "50900"],
+    ["ME", "51000"],
+    ["ME", "51300"],
+    ["ME", "52500"],
+    ["ME", "56000"],
+    ["ME", "56200"],
+    ["ME", "57900"],
+    ["ME", "58700"],
+    ["ME", "58800"],
+    ["ME", "60800"],
+    ["ME", "68700"],
+    ["MGMT", "20100"],
+    ["MSE", "23000"],
+    ["PHYS", "24100"],
+];
 
 function maCheck() {
     var subject = document.getElementById("subject").value;
@@ -642,10 +766,17 @@ function maCheck() {
         course = course.concat("00");
     }
 
-    var ma_check
+    var ma_check;
+    var wj_check;
     for (var i = 0; i < ma_exam_archive.length; i++) {
         if (subject === ma_exam_archive[i][0] && course === ma_exam_archive[i][1]) {
             ma_check = true;
+        }
+    }
+
+    for (var i = 0; i < all_exam_archive.length; i++) {
+        if (subject === all_exam_archive[i][0] && course === all_exam_archive[i][1]) {
+            wj_check = true;
         }
     }
 
@@ -654,9 +785,16 @@ function maCheck() {
     } else {
         document.getElementById("exam_archive").style.display = "none";
     }
+
+    if (wj_check) {
+        document.getElementById("weeklyjoy_exam_archive").style.display = "block";
+    } else {
+        document.getElementById("weeklyjoy_exam_archive").style.display = "none";
+    }  
+    
 }
 
-function examArchiveRedirect() {
+function pExamArchiveRedirect() {
     document.getElementById("subject").style.borderColor = "white";
     document.getElementById("course").style.borderColor = "white";
     var subject = document.getElementById("subject").value;
@@ -672,8 +810,24 @@ function examArchiveRedirect() {
         a.click();
     }
     setTimeout(clearDemo, 1000);
+}
 
-
+function wjExamArchiveRedirect() {
+    document.getElementById("subject").style.borderColor = "white";
+    document.getElementById("course").style.borderColor = "white";
+    var subject = document.getElementById("subject").value;
+    subject = subject.toUpperCase();
+    var course = document.getElementById("course").value;
+    let a = document.createElement('a');
+    if (course.length > 3) {
+        course = course.substring(0, 3);
+    }
+    if(subject !== "" && course !== "") {
+        a.target = '_blank';
+        a.href = 'https://weeklyjoys.wordpress.com/category/' + subject + '-' + course + '/';
+        a.click();
+    }
+    setTimeout(clearDemo, 1000);
 }
 
 function genEdCheck() {

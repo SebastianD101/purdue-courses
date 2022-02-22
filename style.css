@@ -32,6 +32,23 @@
     border-radius: 10px;
 }
 
+#weeklyjoy_exam_archive {
+    border: none;
+    color: #CEB888;
+    height: 40px;
+    text-align: center;
+    width: 33%;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: Transparent;
+    border: 2px solid #CEB888;
+    border-radius: 10px;
+}
+
 @media all and (min-width:800px) and (max-width: 5000px) {
     #button:hover {
         background-color: rgba(255, 255, 255, 0.1);
@@ -45,6 +62,14 @@
         color: #FFFFFF;
     }
     #exam_archive:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #FFFFFF;
+        border: 5px solid #FFFFFF;
+    }
+    #weeklyjoy_exam_archive:hover + #input{
+        color: #FFFFFF;
+    }
+    #weeklyjoy_exam_archive:hover {
         background-color: rgba(255, 255, 255, 0.1);
         color: #FFFFFF;
         border: 5px solid #FFFFFF;
@@ -72,6 +97,10 @@
         text-align: center;
     }
     #exam_archive {
+        width: 80%;
+        text-align: center;
+    }
+    #weeklyjoy_exam_archive {
         width: 80%;
         text-align: center;
     }
