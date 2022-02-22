@@ -950,7 +950,25 @@ function purdueRedirect() {
     }
     if(subject !== "" && course !== "") {
         a.target = '_blank';
-        a.href = 'https://selfservice.mypurdue.purdue.edu/prod/bzwsrch.p_catalog_detail?term=202220&subject=' + subject + '&cnbr=' + course;
+        a.href = 'https://selfservice.mypurdue.purdue.edu/prod/bzwsrch.p_catalog_detail?term=202220&subject=' + subject + '&cnbr=' + course + '&enhanced=Y';
+        a.click();
+    }
+    setTimeout(clearDemo, 1000);
+}
+
+function timeRedirect() {
+    document.getElementById("subject").style.borderColor = "white";
+    document.getElementById("course").style.borderColor = "white";
+    var subject = document.getElementById("subject").value;
+    subject = subject.toUpperCase();
+    var course = document.getElementById("course").value;
+    let a = document.createElement('a');
+    if (course.length == 3) {
+        course = course.concat("00");
+    }
+    if(subject !== "" && course !== "") {
+        a.target = '_blank';
+        a.href = 'https://timetable.mypurdue.purdue.edu/Timetabling/gwt.jsp?page=classes#name=' + subject + '+' + course + '&sort=0&term=Spring2022PWL';
         a.click();
     }
     setTimeout(clearDemo, 1000);
