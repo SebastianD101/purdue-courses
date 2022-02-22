@@ -622,6 +622,60 @@ var written_communication = [
     ["SPAN", "33000"],
 ];
 
+var ma_exam_archive = [
+    ["MA", "16100"],
+    ["MA", "16200"],
+    ["MA", "16500"],
+    ["MA", "16600"],
+    ["MA", "26100"],
+    ["MA", "26200"],
+    ["MA", "26500"],
+    ["MA", "26600"],
+]
+
+function maCheck() {
+    var subject = document.getElementById("subject").value;
+    subject = subject.toUpperCase();
+
+    var course = document.getElementById("course").value;
+    if (course.length == 3) {
+        course = course.concat("00");
+    }
+
+    var ma_check
+    for (var i = 0; i < ma_exam_archive.length; i++) {
+        if (subject === ma_exam_archive[i][0] && course === ma_exam_archive[i][1]) {
+            ma_check = true;
+        }
+    }
+
+    if (ma_check) {
+        document.getElementById("exam_archive").style.display = "block";
+    } else {
+        document.getElementById("exam_archive").style.display = "none";
+    }
+}
+
+function examArchiveRedirect() {
+    document.getElementById("subject").style.borderColor = "white";
+    document.getElementById("course").style.borderColor = "white";
+    var subject = document.getElementById("subject").value;
+    subject = subject.toUpperCase();
+    var course = document.getElementById("course").value;
+    let a = document.createElement('a');
+    if (course.length == 3) {
+        course = course.concat("00");
+    }
+    if(subject !== "" && course !== "") {
+        a.target = '_blank';
+        a.href = 'https://www.math.purdue.edu/academic/courses/oldexams.php?course=' + subject + course;
+        a.click();
+    }
+    setTimeout(clearDemo, 1000);
+
+
+}
+
 function genEdCheck() {
     var subject = document.getElementById("subject").value;
     subject = subject.toUpperCase();

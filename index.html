@@ -14,13 +14,14 @@
     <form><br><br><br><br><br><br>
 
         <center>
-            <input type="text" id="subject" name="keyword" placeholder="Enter Course Subject (e.g. MA, CS, EAPS)"><br>
-            <input type="text" id="course" name="keyword" placeholder="Enter Course Number (e.g. 26100, 18000, 10500)"><br><br>
+            <input type="text" id="subject" name="keyword" placeholder="Enter Course Subject (e.g. MA, CS, EAPS)" onchange="maCheck()"><br>
+            <input type="text" id="course" name="keyword" placeholder="Enter Course Number (e.g. 26100, 18000, 10500)" onchange="maCheck()"><br><br>
             <div class="button_container">
                 <input type="button" id="button" name="purdue" value="Course Catalog" onclick="purdueRedirect()">
                 <input type="button" id="button" name="reddit" value="Reddit" onclick="redditRedirect()">
                 <input type="button" id="button" name="rmc" value="Rate My Courses" onclick="RMCRedirect()">
                 <input type="button" id="button" name="gened" value="Gen Ed Type" onclick="genEdCheck()">
+                <input type="button" id="exam_archive" name="exam_archive" value="Exam Archive" style="display: none;" onclick="examArchiveRedirect()">
             </div>
             <h4 id="bss" style="display:none">This course is a Behavioral/Social Sciences (BSS)</h4>
             <h4 id="hum" style="display:none">This course is a Humanities (HUM)</h4>
