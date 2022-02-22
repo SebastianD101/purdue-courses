@@ -634,7 +634,6 @@ var ma_exam_archive = [
 ]
 
 function maCheck() {
-    alert("MA Check");
     var subject = document.getElementById("subject").value;
     subject = subject.toUpperCase();
 
