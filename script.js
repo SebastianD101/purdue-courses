@@ -765,7 +765,7 @@ function maCheck() {
     if (course.length == 3) {
         course = course.concat("00");
     }
-
+//kuhiuyh
     var ma_check;
     var wj_check;
     for (var i = 0; i < ma_exam_archive.length; i++) {
