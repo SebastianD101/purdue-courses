@@ -1014,10 +1014,13 @@ function RMCRedirect() {
     document.getElementById("course").style.borderColor = "white";
     var subject = document.getElementById("subject").value;
     var course = document.getElementById("course").value;
-    let a= document.createElement('a');
+    let a = document.createElement('a');
+    if (course.substring(3, 5) === "00") {
+        course = course.substring(0, 3);
+    }
     if(subject !== "" && course !== "") {
         a.target= '_blank';
-        a.href= 'https://www.ratemycourses.io/purdue/course/' + subject + course;
+        a.href= 'https://www.ratemycourses.io/purdue/course/' + subject + course + "00";
         a.click();
     }
     setTimeout(clearDemo, 1000);
