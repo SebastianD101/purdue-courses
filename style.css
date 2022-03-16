@@ -21,18 +21,23 @@
         color: #FFFFFF;
         border: 5px solid #FFFFFF;
     }
-    .input_buttons:hover + #input{
-      color: #FFFFFF;
+
+    .input_buttons:hover+#input {
+        color: #FFFFFF;
     }
+
     form {
         width: 60%;
     }
+
     .button_container {
         width: 100%;
     }
+
     input[type=text] {
         width: 100%;
     }
+
     input[type=button] {
         text-align: center;
     }
@@ -42,6 +47,7 @@
     input[type=text] {
         width: 80%;
     }
+
     .input_buttons {
         width: 80%;
         text-align: center;
@@ -52,7 +58,7 @@ body {
     background: #121212;
     font-size: 20px;
     color: #CEB888;
-    margin:0;
+    margin: 0;
 }
 
 form {
@@ -74,18 +80,18 @@ input[type=text] {
 }
 
 input[type=text]:focus {
-      background-color: Transparent;
-      color: #ffffff;
-      border: 2px solid #CEB888;
+    background-color: Transparent;
+    color: #ffffff;
+    border: 2px solid #CEB888;
 }
 
 ::placeholder {
-  color: #CEB888;
-  opacity: 1;
+    color: #CEB888;
+    opacity: 1;
 }
 
-input[type=text]:focus, textarea:focus {
-  box-shadow: 0 0 5px rgba(255, 255, 255, 1);
-  border: 4px solid #FFFFFF;
+input[type=text]:focus,
+textarea:focus {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 1);
+    border: 4px solid #FFFFFF;
 }
-
