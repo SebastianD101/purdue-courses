@@ -968,7 +968,7 @@ function timeRedirect() {
     }
     if (subject !== "" && course !== "") {
         a.target = '_blank';
-        a.href = 'https://timetable.mypurdue.purdue.edu/Timetabling/gwt.jsp?page=classes#name=' + subject + '+' + course + '&sort=0&term=Spring2022PWL';
+        a.href = 'https://timetable.mypurdue.purdue.edu/Timetabling/gwt.jsp?page=classes#name=' + subject + '+' + course + '&sort=0&term=Fall2022PWL';
         a.click();
     }
     setTimeout(clearDemo, 1000);
