@@ -15,6 +15,27 @@
     border-radius: 10px;
 }
 
+select {
+    border: none;
+    color: #CEB888;
+    height: 40px;
+    text-align: center;
+    width: 33%;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: Transparent;
+    border: 2px solid #CEB888;
+    border-radius: 10px;
+}
+
+select option {
+    background: #121212;
+}
+
 @media all and (min-width:800px) and (max-width: 5000px) {
     .input_buttons:hover {
         background-color: rgba(255, 255, 255, 0.1);
@@ -23,6 +44,10 @@
     }
 
     .input_buttons:hover+#input {
+        color: #FFFFFF;
+    }
+
+    select:hover+#input {
         color: #FFFFFF;
     }
 
@@ -49,6 +74,11 @@
     }
 
     .input_buttons {
+        width: 80%;
+        text-align: center;
+    }
+
+    select {
         width: 80%;
         text-align: center;
     }

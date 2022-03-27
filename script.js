@@ -959,6 +959,8 @@ function purdueRedirect() {
 function timeRedirect() {
     document.getElementById("subject").style.borderColor = "white";
     document.getElementById("course").style.borderColor = "white";
+    document.getElementById("time").style.borderColor = "white";
+    var time = document.getElementById("time").value;
     var subject = document.getElementById("subject").value;
     subject = subject.toUpperCase();
     var course = document.getElementById("course").value;
@@ -968,7 +970,18 @@ function timeRedirect() {
     }
     if (subject !== "" && course !== "") {
         a.target = '_blank';
-        a.href = 'https://timetable.mypurdue.purdue.edu/Timetabling/gwt.jsp?page=classes#name=' + subject + '+' + course + '&sort=0&term=Fall2022PWL';
+        if (time == "time_fall2022") {
+            a.href = 'https://timetable.mypurdue.purdue.edu/Timetabling/gwt.jsp?page=classes#name=' + subject + '+' + course + '&sort=0&term=Fall2022PWL';
+        }
+        else if (time == "time_summer2022") {
+            a.href = 'https://timetable.mypurdue.purdue.edu/Timetabling/gwt.jsp?page=classes#name=' + subject + '+' + course + '&sort=0&term=Summer2022PWL';
+        }
+        else if (time == "time_spring2022") {
+            a.href = 'https://timetable.mypurdue.purdue.edu/Timetabling/gwt.jsp?page=classes#name=' + subject + '+' + course + '&sort=0&term=Spring2022PWL';
+        }
+        else if (time == "time_fall2021") {
+            a.href = 'https://timetable.mypurdue.purdue.edu/Timetabling/gwt.jsp?page=classes#name=' + subject + '+' + course + '&sort=0&term=Fall2021PWL';
+        }
         a.click();
     }
     setTimeout(clearDemo, 1000);
@@ -977,6 +990,8 @@ function timeRedirect() {
 function examRedirect() {
     document.getElementById("subject").style.borderColor = "white";
     document.getElementById("course").style.borderColor = "white";
+    document.getElementById("exam").style.borderColor = "white";
+    var exam = document.getElementById("exam").value;
     var subject = document.getElementById("subject").value;
     subject = subject.toUpperCase();
     var course = document.getElementById("course").value;
@@ -986,7 +1001,18 @@ function examRedirect() {
     }
     if (subject !== "" && course !== "") {
         a.target = '_blank';
-        a.href = 'https://timetable.mypurdue.purdue.edu/Timetabling/gwt.jsp?page=exams#name=' + subject + '+' + course + '&term=Spring2022PWL';
+        if (exam == "exam_spring2022") {
+            a.href = 'https://timetable.mypurdue.purdue.edu/Timetabling/gwt.jsp?page=exams#name=' + subject + '+' + course + '&term=Spring2022PWL';
+        }
+        else if (exam == "exam_fall2021") {
+            a.href = 'https://timetable.mypurdue.purdue.edu/Timetabling/gwt.jsp?page=exams#name=' + subject + '+' + course + '&term=Fall2021PWL';
+        }
+        else if (exam == "exam_summer2021") {
+            a.href = 'https://timetable.mypurdue.purdue.edu/Timetabling/gwt.jsp?page=exams#name=' + subject + '+' + course + '&term=Summer2021PWL';
+        }
+        else if (exam == "exam_spring2021") {
+            a.href = 'https://timetable.mypurdue.purdue.edu/Timetabling/gwt.jsp?page=exams#name=' + subject + '+' + course + '&term=Spring2021PWL';
+        }
         a.click();
     }
     setTimeout(clearDemo, 1000);
@@ -1029,4 +1055,6 @@ function RMCRedirect() {
 function clearDemo() {
     document.getElementById("subject").style.borderColor = '#CEB888';
     document.getElementById("course").style.borderColor = '#CEB888';
+    document.getElementById("time").style.borderColor = '#CEB888';
+    document.getElementById("exam").style.borderColor = '#CEB888';
 }

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
+    <link rel="icon" href="courses-icon-28.png">
 </head>
 <div id="square"></div>
 <script src="script.js"></script>
@@ -29,10 +30,24 @@
                         onclick="RMCRedirect()">
                     <input type="button" class="input_buttons" id="button" name="gened" value="Gen Ed Type"
                         onclick="genEdCheck()">
-                    <input type="button" class="input_buttons" id="button" name="time" value="Lecture/Lab Times"
+                    <select id="time" onchange="timeRedirect();" onfocus="this.selectedIndex = -1;">
+                        <option value="">Lecture/Lab Times</option>
+                        <option value="time_fall2022">Fall 2022</option>
+                        <option value="time_summer2022">Summer 2022</option>
+                        <option value="time_spring2022">Spring 2022</option>
+                        <option value="time_fall2021">Fall 2021</option>
+                    </select>
+                    <select id="exam" onchange="examRedirect()">
+                        <option value="">Exam Times</option>
+                        <option value="exam_spring2022">Spring 2022</option>
+                        <option value="exam_fall2021">Fall 2021</option>
+                        <option value="exam_summer2021">Summer 2021</option>
+                        <option value="exam_spring 2021">Spring 2021</option>
+                    </select>
+                    <!-- <input type="button" class="input_buttons" id="button" name="time" value="Lecture/Lab Times"
                         onclick="timeRedirect()">
                     <input type="button" class="input_buttons" id="button" name="exam" value="Exam Times"
-                        onclick="examRedirect()">
+                        onclick="examRedirect()"> -->
                     <input type="button" class="input_buttons" id="exam_archive" name="purdue_exam_archive"
                         value="Purdue Exam Archive" style="display: none;" onclick="pExamArchiveRedirect()">
                     <input type="button" class="input_buttons" id="weeklyjoy_exam_archive" name="weeklyjoy_exam_archive"
