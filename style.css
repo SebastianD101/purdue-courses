@@ -32,6 +32,13 @@ select {
     border-radius: 10px;
 }
 
+h1 {
+    color: #CEB888;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
 select option {
     background: #121212;
 }
@@ -81,6 +88,7 @@ select option {
     select {
         width: 80%;
         text-align: center;
+        text-align-last: center;
     }
 }
 
@@ -90,6 +98,20 @@ body {
     color: #CEB888;
     margin: 0;
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #121212;
+  }
+  
+  li {
+    float: left;
+    margin: 10px;
+    font-size: 40px;
+  }
 
 form {
     margin-left: 10%;
