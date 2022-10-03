@@ -978,7 +978,6 @@ function timeRedirect() {
 }
 
 function examRedirect() {
-    alert("This feature is currently unavailable.");
     document.getElementById("subject").style.borderColor = "white";
     document.getElementById("course").style.borderColor = "white";
     var subject = document.getElementById("subject").value;
