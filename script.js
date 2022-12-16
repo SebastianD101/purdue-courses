@@ -953,7 +953,7 @@ function purdueRedirect() {
     }
     if (subject !== "" && course !== "") {
         a.target = '_blank';
-        a.href = 'https://selfservice.mypurdue.purdue.edu/prod/bzwsrch.p_catalog_detail?term=202220&subject=' + subject + '&cnbr=' + course + '&enhanced=Y';
+        a.href = 'https://selfservice.mypurdue.purdue.edu/prod/bzwsrch.p_catalog_detail?term=202320&subject=' + subject + '&cnbr=' + course + '&enhanced=Y';
         a.click();
     }
     setTimeout(clearDemo, 1000);
