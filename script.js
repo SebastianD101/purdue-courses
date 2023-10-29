@@ -953,7 +953,7 @@ function purdueRedirect() {
     }
     if (subject !== "" && course !== "") {
         a.target = '_blank';
-        a.href = 'https://selfservice.mypurdue.purdue.edu/prod/bzwsrch.p_catalog_detail?term=202320&subject=' + subject + '&cnbr=' + course + '&enhanced=Y';
+        a.href = 'https://selfservice.mypurdue.purdue.edu/prod/bzwsrch.p_catalog_detail?term=202420&subject=' + subject + '&cnbr=' + course + '&enhanced=Y';
         a.click();
     }
     setTimeout(clearDemo, 1000);
@@ -971,7 +971,7 @@ function timeRedirect() {
     }
     if (subject !== "" && course !== "") {
         a.target = '_blank';
-        a.href = 'https://timetable.mypurdue.purdue.edu/Timetabling/gwt.jsp?page=classes#name=' + subject + '+' + course + '&sort=0&term=Spring2023PWL';
+        a.href = 'https://timetable.mypurdue.purdue.edu/Timetabling/gwt.jsp?page=classes#name=' + subject + '+' + course + '&sort=0&term=Spring2024PWL';
         a.click();
     }
     setTimeout(clearDemo, 1000);
@@ -989,7 +989,7 @@ function examRedirect() {
     }
     if (subject !== "" && course !== "") {
         a.target = '_blank';
-        a.href = 'https://timetable.mypurdue.purdue.edu/Timetabling/gwt.jsp?page=exams#name=' + subject + '+' + course + '&sort=0&term=Spring2023PWL';
+        a.href = 'https://timetable.mypurdue.purdue.edu/Timetabling/gwt.jsp?page=exams#name=' + subject + '+' + course + '&sort=0&term=Fall2023PWL';
         a.click();
     }
     setTimeout(clearDemo, 1000);
